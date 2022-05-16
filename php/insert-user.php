@@ -1,9 +1,8 @@
 <?php
+include 'conexion.php';
 
-function InsertUser ($conn, $email, $select_state) {
-		
-    include 'conexion.php';
-
+function InsertUser ($conn, $email, $select_state) {	  
+   
     $sql_insertUser='INSERT INTO subscription (id_subscription, id_state, email) VALUES (?, ? ,?)';
 
     $stmt_insert = $conn->prepare($sql_insertUser);
@@ -25,8 +24,6 @@ if (isset($_POST['accion']) and $_POST['accion']=="saveUser"){
 
     $email=$_POST['email']; 
     $select_state=$_POST['select_state']; 
-
-    include 'conexion.php';
 
     InsertUser ($conn, $email, $select_state);
 }

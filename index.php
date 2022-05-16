@@ -1,10 +1,3 @@
-<?php
-$path = 'php/conexion.php';
-
-if (file_exists($path)) {
-    include 'php/conexion.php';
-} 
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -35,13 +28,10 @@ if (file_exists($path)) {
 
                 <div class="form-group">
                     <label class="form-label">Estado: </label>
-                    <select class="form-select" id="state" name="select_state">
-                        <option selected></option>
+                    <select class="form-select" id="state" name="select_state" >                        
                             <?php
-                            $query = $conn -> query ("SELECT * FROM state");
-                            while ($valores = mysqli_fetch_array($query)) {
-                                echo '<option value="'.$valores[id_state].'">'.$valores[name].'</option>';
-                            }
+                            require_once('php/select-state.php');
+                            echo createState();                           
                             ?>
                     </select>      
                     <span class="text-danger" id="error-state" style="visibility:hidden;">Ingresa un estado valido</span>      
