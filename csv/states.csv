@@ -1,4 +1,4 @@
-id,code,name,createdAt,updatedAt
+id_state,code,name,createdAt,updatedAt
 1,AK,Alaska,"2021-08-01 16:23:51","2021-08-01 16:23:51"
 2,AL,Alabama,"2021-08-01 16:23:51","2021-08-01 16:23:51"
 3,HI,Hawaii,"2021-08-01 16:23:51","2021-08-01 16:23:51"

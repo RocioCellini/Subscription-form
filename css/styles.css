@@ -1,0 +1,23 @@
+div {
+    display:block;
+    justify-content: center;
+}
+
+h2{
+    margin: 30px;
+    text-align: center;
+}
+
+.form-horizontal{
+    margin: 20px;
+    border: 2px solid #89B7F2;
+}
+
+.form-group{
+    margin: 20px;
+} 
+
+
+
+
+

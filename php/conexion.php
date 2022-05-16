@@ -1,9 +1,12 @@
 <?php
-	$dbhost = 'localhost';
-	$dbuser = 'bekeu_suscripciones';
-	$dbpass = 'bekeu8357';
-	$dbname = 'bekeu';
+	$DBServer = 'localhost'; 
+	$DBUser = 'admin';
+	$DBPass = 'admin8353';
+	$DBName = 'bekeu-subscription';
 
-	$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die ('Ocurrio un error al conectarse al servidor mysql');
-	mysql_select_db($dbname);
+	$conn = new mysqli($DBServer, $DBUser, $DBPass, $DBName);
+
+	if ($conn->connect_error) {
+	trigger_error('Database connection failed: '  . $conn->connect_error, E_USER_ERROR);
+	} 
 ?>
